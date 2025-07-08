@@ -11,7 +11,7 @@ client = MongoClient("mongodb+srv://mo7amednabih:Cpz0xP5eJV0NsLDQ@cluster0.lpj4m
 db = client["CareDent"]
 
 # Register Blueprints
-app.register_blueprint(dashboard_bp)
+app.register_blueprint(dashboard_bp, url_prefix="/api")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
