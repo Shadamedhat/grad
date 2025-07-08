@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from routes.dashboard_routes import dashboard_bp
+from flask_dashboard.routes.dashboard_routes import dashboard_bp
 from pymongo import MongoClient
 
 app = Flask(__name__)
