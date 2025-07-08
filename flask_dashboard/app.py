@@ -4,6 +4,7 @@ from routes.dashboard_routes import dashboard_bp
 from pymongo import MongoClient
 
 app = Flask(__name__)
+print("🚀 Flask app is starting...")
 CORS(app)
 
 # MongoDB connection
@@ -12,8 +13,6 @@ db = client["CareDent"]
 
 # Register Blueprints
 app.register_blueprint(dashboard_bp, url_prefix="/api")
-@app.route("/test")
-def test():
-    return "Server is working"
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
