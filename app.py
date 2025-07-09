@@ -11,7 +11,9 @@ CORS(app)
 @app.route("/ping")
 def ping():
     return "pong"
-
+@app.route("/")
+def home():
+    return "<h2>✅ Dental Dashboard API is running!</h2><p>Use the /api endpoints to get data.</p>"
 # MongoDB connection
 try:
     from pymongo import MongoClient
